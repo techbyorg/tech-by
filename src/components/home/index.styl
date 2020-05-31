@@ -1,23 +1,21 @@
 @require '../../vars'
 
-.z-fund-search-results-mobile-row
-  > .name
-    font-subtitle1()
+.z-home
+  > .header
+    background: getColor('$primaryMain')
+    text-align: center
+    padding-bottom: 366px
 
-  > .location
-    font-body1(medium)
+    > .top
+      > .logo
+        width: 140px
+        height: 32px
 
-  // > .focus-areas
+    > .title
+      font-h1()
+      color: getColor('$primaryMainText')
+      margin-top: 100px
+      margin-bottom: 10px
 
-  > .stats
-    display: flex
-    margin-top: 16px
-
-    > .stat
-      flex1()
-
-      > .title
-        font-caption()
-
-      > .value
-        font-subtitle1()
+    > .description
+      font-h5()
