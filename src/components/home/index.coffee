@@ -15,10 +15,11 @@ export default $home = ->
         z '.logo'
       z '.title', lang.get 'home.title'
       z '.description', lang.get 'home.description'
-    z '.products-banners',
+    z '.products-banner',
       z '.title', lang.get 'home.productsTitle'
       z '.description', lang.get 'home.productsDescription'
     router.link z 'a', {
       href:'https://fundraise.techby.org'
       target: '_self'
     }, 'go'
+    
