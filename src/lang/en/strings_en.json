@@ -2,5 +2,8 @@
   "home.title": "Tech by a non-profit, for non-profits",
   "home.description": "We're a 501c3 with a mission of moving the nonprofit space forward by building better technology",
   "home.productsTitle": "Products",
-  "home.productsDescription": "Made with ❤️ to help other nonprofits"
+  "home.productsDescription": "Made with ❤️ to help other nonprofits",
+
+  "homePage.title": "TechBy",
+  "homePage.description": "Tech by a non-profit, for non-profits"
 }
