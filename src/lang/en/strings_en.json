@@ -2,7 +2,13 @@
   "home.title": "Tech by a non-profit, for non-profits",
   "home.description": "We're a 501c3 with a mission of moving the nonprofit space forward by building better technology",
   "home.productsTitle": "Products",
-  "home.productsDescription": "Made with ❤️ to help other nonprofits",
+  "home.productsDescription": "Made with <3 to help other nonprofits",
+  "home.sourceCode": "Source code",
+
+  "product.fundraise.link": "Use for free",
+  "product.fundraise.description": "A tool to help you find funders and grants",
+  "product.api.link": "Use the API",
+  "product.api.description": "Easy programmatic access to information about nonprofits and funders",
 
   "homePage.title": "TechBy",
   "homePage.description": "Tech by a non-profit, for non-profits"

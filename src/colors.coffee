@@ -5,6 +5,7 @@ $black26 = 'rgba(0, 0, 0, 0.26)'
 $black54 = 'rgba(0, 0, 0, 0.54)'
 $black70 = 'rgba(0, 0, 0, 0.70)'
 $black87 = 'rgba(0, 0, 0, 0.87)'
+$black = '#000000'
 $white = '#ffffff'
 $white54 = 'rgba(255, 255, 255, 0.54)'
 
@@ -15,16 +16,17 @@ colors = _.defaults {
     '--header-500-text-54': $black54
     '--header-500-icon': '#757575'
 
-    '--primary-50': 'rgba(63, 113, 222, 0.04)'
-    '--primary-100': '#C5D4F5'
-    '--primary-200': '#9FB8EF'
-    '--primary-300': '#799CE8'
-    '--primary-400': '#5C86E3'
-    '--primary-500': '#3F71DE'
-    '--primary-600': '#3969DA'
-    '--primary-700': '#315ED5'
-    '--primary-800': '#2954D1'
-    '--primary-900': '#1B42C8'
+    '--primary-50': '#E8E4F1'
+    '--primary-100': '#C5BDDD'
+    '--primary-200': '#9E91C7'
+    '--primary-300': '#7764B0'
+    '--primary-400': '#59439F'
+    '--primary-500': '#3C228E'
+    '--primary-600': '#361E86'
+    '--primary-700': '#2E197B'
+    '--primary-800': '#271471'
+    '--primary-900': '#1c0b51'
+    '--primary-900-54': 'rgba(28, 11, 81, 0.54)'
     '--primary-100-text': $black87
     '--primary-200-text': $black87
     '--primary-300-text': '#FAFAFA'
@@ -36,16 +38,16 @@ colors = _.defaults {
     '--primary-900-text': '#FAFAFA'
     '--primary-900-text-54': 'rgba(250, 250, 250, 0.54)'
 
-    '--secondary-50': '#E0F7F7'
-    '--secondary-100': '#B3ECEC'
-    '--secondary-200': '#80E0DF'
-    '--secondary-300': '#4DD3D2'
-    '--secondary-400': '#26C9C8'
-    '--secondary-500': '#00C0BE'
-    '--secondary-600': '#00BAB8'
-    '--secondary-700': '#00B2AF'
-    '--secondary-800': '#00AAA7'
-    '--secondary-900': '#009C99'
+    '--secondary-50': '#FFE5F0'
+    '--secondary-100': '#FFBFD8'
+    '--secondary-200': '#FF94BF'
+    '--secondary-300': '#FF69A5'
+    '--secondary-400': '#FF4991'
+    '--secondary-500': '#FF297E'
+    '--secondary-600': '#FF2476'
+    '--secondary-700': '#FF1F6B'
+    '--secondary-800': '#FF1961'
+    '--secondary-900': '#FF0F4E'
     '--secondary-100-text': $black87
     '--secondary-200-text': $black87
     '--secondary-300-text': $black87
@@ -69,6 +71,7 @@ colors = _.defaults {
     '--bg-text-60': 'rgba(0, 0, 0, 0.6)'
     '--bg-text-70': $black70
     '--bg-text-87': $black87
+    '--bg-text-100': $black
 
     '--quaternary-500': '#fedf57'
     '--quaternary-500-text': $white
@@ -92,6 +95,7 @@ colors = _.defaults {
   '$primary700': 'var(--primary-700)'
   '$primary800': 'var(--primary-800)'
   '$primary900': 'var(--primary-900)'
+  '$primary90054': 'var(--primary-900-54)'
   '$primaryMain': 'var(--primary-500)'
 
   '$primary100Text': 'var(--primary-100-text)'
@@ -167,6 +171,7 @@ colors = _.defaults {
   '$bgText60': 'var(--bg-text-60)'
   '$bgText70': 'var(--bg-text-70)'
   '$bgText87': 'var(--bg-text-87)'
+  '$bgText100': 'var(--bg-text-100)'
 
   '$tabSelected': $white
   '$tabUnselected': '#1a1a1a'

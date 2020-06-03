@@ -2,30 +2,154 @@
 
 .z-home
   > .header
-    background: getColor('$primaryMain')
-    text-align: center
-    padding-bottom: 366px
+    background: getColor('$primary900')
 
     > .top
-      > .logo
-        width: 140px
-        height: 32px
+      background: getColor('$bgColor')
+      padding: 16px
 
-    > .title
-      font-h1()
-      color: getColor('$primaryMainText')
-      margin-top: 100px
-      margin-bottom: 10px
+      > .container
+        container()
 
-    > .description
-      font-h5()
+        > .logo
+          width: 140px
+          height: 32px
+          font-size: 24px
+          color: getColor('$primary900')
+
+    > .content
+      padding: 68px 16px 260px 16px
+      text-align: center
+
+      > .title
+        font-h4()
+        color: getColor('$primaryMainText')
+        margin-bottom: 24px
+
+      > .description
+        font-subtitle1()
+        color: getColor('$primaryMainText54')
+        max-width: 830px
+        margin: 0 auto
 
   > .products-banner
     text-align: center
-    padding: 148px 0
+    padding: 56px 16px
 
     > .title
-      font-h1()
+      font-h4()
+      color: getColor('$primary900')
 
     > .description
-      font-h4()
+      font-subtitle1()
+      color: getColor('$primary90054')
+      margin-top: 4px
+
+  > .product
+    padding: 56px 16px
+    background: getColor('$bgColorAlt1')
+
+    &.is-light
+      background: getColor('$bgColor')
+
+      > .container
+        > .image
+          background: getColor('$bgColorAlt1')
+
+    > .container
+      container()
+
+      > .image
+        background: getColor('$bgColor')
+        width: 100%
+        height: 0
+        padding-bottom: 72%
+        margin-bottom: 32px
+
+      > .content
+        > .name
+          font-h6()
+          font-weight: 700
+          color: getColor('$primary900')
+
+          > .by-tech-by
+            color: getColor('$secondary500')
+            font-weight: 300
+
+        > .description
+          font-subtitle1()
+          margin-top: 16px
+          color: getColor('$primary90054')
+
+        > .link
+          font-button()
+          color: getColor('$secondary500')
+          text-transform: uppercase
+          display: block
+          margin-top: 20px
+          display: flex
+          align-items: center
+
+          > .icon
+            margin-left: 12px
+
+        > .apps
+          margin-top: 36px
+
+          > .app
+            display: flex
+            align-items: center
+            margin-bottom: 16px
+
+            &:last
+              margin-bottom: 0
+
+            > .icon
+              width: 40px
+              height: 40px
+              border: 2px solid getColor('$primary300')
+              border-radius: 50%
+              margin-right: 20px
+
+            > .text
+              font-subtitle1()
+
+  @media (min-width: $breakPointMedium)
+    > .header
+      > .top
+        background: transparent
+        padding: 32px 16px
+
+        > .container
+          > .logo
+            color: getColor('$primaryMainText')
+
+    > .product
+      &.is-light
+        > .container
+          flex-direction: row-reverse
+
+          > .image
+            margin-left: 142px
+            margin-right: 0
+
+      > .container
+        display: flex
+        align-items: center
+
+        > .image
+          width: 612px
+          height: 440px
+          padding-bottom: 0
+          margin-bottom: 0
+          margin-right: 142px
+
+        > .content > .apps
+          display: flex
+
+          > .app
+            margin-right: 40px
+            margin-bottom: 0
+
+            &:last
+              margin-right: 0

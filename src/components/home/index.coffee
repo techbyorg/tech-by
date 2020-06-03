@@ -1,6 +1,12 @@
-import {z, useContext} from 'zorium'
+import {z, classKebab, useContext} from 'zorium'
+import * as _ from 'lodash-es'
 import * as Rx from 'rxjs'
+import $icon from 'frontend-shared/components/icon'
+import {
+  chevronRightIconPath, githubIconPath, appleIconPath, googlePlayIconPath
+} from 'frontend-shared/components/icon/paths'
 
+import colors from '../../colors'
 import context from '../../context'
 
 if window?
@@ -9,17 +15,94 @@ if window?
 export default $home = ->
   {lang, router} = useContext context
 
+  products = [
+    {
+      name: 'Fundraise'
+      description: lang.get 'product.fundraise.description'
+      image: ''
+      url: 'https://fundraise.techby.org'
+      iosAppUrl: 'TODO'
+      androidAppUrl: 'TODO'
+      linkText: lang.get 'product.fundraise.link'
+    }
+    {
+      name: 'Nonprofit API'
+      description: lang.get 'product.api.description'
+      image: ''
+      url: 'https://api.techby.org/990/v1/graphql'
+      linkText: lang.get 'product.api.link'
+      githubUrl: 'https://github.com/techbyorg/irs-990-api'
+    }
+  ]
+
+
   z '.z-home',
     z '.header',
       z '.top',
-        z '.logo'
-      z '.title', lang.get 'home.title'
-      z '.description', lang.get 'home.description'
+        z '.container',
+          z '.logo', 'TechBy'
+      z '.content',
+        z '.title', lang.get 'home.title'
+        z '.description', lang.get 'home.description'
     z '.products-banner',
       z '.title', lang.get 'home.productsTitle'
       z '.description', lang.get 'home.productsDescription'
-    router.link z 'a', {
-      href:'https://fundraise.techby.org'
-      target: '_self'
-    }, 'go'
-    
+    _.map products, (product, i) ->
+      {name, description, image, url, linkText,
+        iosAppUrl, androidAppUrl, githubUrl} = product
+
+      z '.product', {
+        className: classKebab {isLight: (i % 2)}
+      },
+        z '.container',
+          z '.image',
+            style:
+              backgroundImage: "url(#{image})"
+          z '.content',
+            z '.name',
+              name
+              z 'span.by-tech-by', 'byTechBy'
+            z '.description', description
+            router.link z 'a.link', {
+              href: url
+              target: '_self'
+            },
+              linkText
+              z '.icon',
+                z $icon,
+                  icon: chevronRightIconPath
+                  color: colors.$secondary500
+
+            z '.apps',
+              if iosAppUrl
+                # router.link z 'a.app', {
+                z 'a.app', {
+                  href: iosAppUrl
+                  onclick: (e) ->
+                    e.preventDefault()
+                    alert 'Coming soon!'
+                },
+                  z '.icon',
+                    z $icon,
+                      icon: appleIconPath
+                  z '.text', 'App Store'
+              if androidAppUrl
+                # router.link z 'a.app', {
+                z 'a.app', {
+                  href: androidAppUrl
+                  onclick: (e) ->
+                    e.preventDefault()
+                    alert 'Coming soon!'
+                },
+                  z '.icon',
+                    z $icon,
+                      icon: googlePlayIconPath
+                  z '.text', 'Google Play'
+              if githubUrl
+                router.link z 'a.app', {
+                  href: githubUrl
+                },
+                  z '.icon',
+                    z $icon,
+                      icon: githubIconPath
+                  z '.text', lang.get 'home.sourceCode'
