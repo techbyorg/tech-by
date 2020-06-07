@@ -1,5 +1,5 @@
 {
-  "home.title": "Tech by a non-profit, for non-profits",
+  "home.title": "Tech by a nonprofit, for nonprofits",
   "home.description": "We're a 501c3 with a mission of moving the nonprofit space forward by building better technology",
   "home.productsTitle": "Products",
   "home.productsDescription": "Made with <3 to help other nonprofits",
@@ -11,5 +11,5 @@
   "product.api.description": "Easy programmatic access to information about nonprofits and funders",
 
   "homePage.title": "TechBy",
-  "homePage.description": "Tech by a non-profit, for non-profits"
+  "homePage.description": "Tech by a nonprofit, for nonprofits"
 }

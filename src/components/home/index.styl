@@ -1,8 +1,11 @@
 @require '../../vars'
 
 .z-home
+  overflow-x: hidden
+
   > .header
     background: getColor('$primary900')
+    position: relative
 
     > .top
       background: getColor('$bgColor')
@@ -12,10 +15,17 @@
         container()
 
         > .logo
-          width: 140px
-          height: 32px
           font-size: 24px
           color: getColor('$primary900')
+          display: flex
+          align-items: center
+
+          > .icon
+            width: 35px
+            height: 32px
+            background: url($cdnUrl + '/techby/logo.svg')
+            background-size: 100%
+            margin-right: 12px
 
     > .content
       padding: 68px 16px 260px 16px
@@ -31,6 +41,61 @@
         color: getColor('$primaryMainText54')
         max-width: 830px
         margin: 0 auto
+
+    > .circuit-1
+      position: absolute
+      bottom: 70px
+      right: 33%
+      width: 945px
+      height: 166px
+      background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='945' height='166' viewBox='0 0 945 166'><defs><linearGradient id='circuit_1-a' x1='11.503%' x2='75.823%' y1='48.457%' y2='50.841%'><stop offset='0%' stop-color='%23FF297E'/><stop offset='68.699%' stop-color='%23FE87B6'/><stop offset='100%' stop-color='%23FF297E'/></linearGradient></defs><path fill='url(%23circuit_1-a)' d='M452,10 C452.729345,10 453.431308,10.265587 453.976589,10.7432038 L454.12132,10.8786797 L520.243,77 L646,77 C646.729345,77 647.431308,77.265587 647.976589,77.7432038 L648.12132,77.8786797 L740.243,170 L955,170 L955,176 L739,176 C738.270655,176 737.568692,175.734413 737.023411,175.256796 L736.87868,175.12132 L644.757,83 L519,83 C518.270655,83 517.568692,82.734413 517.023411,82.2567962 L516.87868,82.1213203 L450.757,16 L10,16 L10,10 L452,10 Z' transform='translate(-10 -10)'/></svg>")
+
+      &:before
+        content: ''
+        position: absolute
+        left: -50vw
+        top: 0
+        width: 50vw
+        height: 6px
+        background: #FF297E
+        // background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='5' height='5' viewBox='0 0 5 5'><rect width='5' height='5' x='0' y='0' fill='%23FF297E' fill-rule='evenodd'/></svg>")
+        // background-size: 100% auto
+
+      &:after
+        content: ''
+        position: absolute
+        right: -26px
+        bottom: -22px
+        width: 52px
+        height: 52px
+        background: url($cdnUrl + '/techby/home/circuit_light.svg')
+
+    > .circuit-2
+      position: absolute
+      bottom: 188px
+      left: 64%
+      width: 490px
+      height: 6px
+      background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='490' height='6' viewBox='0 0 490 6'><defs><linearGradient id='circuit_2-a' x1='11.503%' x2='75.823%' y1='49.993%' y2='50.004%'><stop offset='0%' stop-color='%23FF297E'/><stop offset='68.699%' stop-color='%23FE87B6'/><stop offset='100%' stop-color='%23FF297E'/></linearGradient></defs><polygon fill='url(%23circuit_2-a)' points='504 0 504 17 0 17 0 0'/></svg>")
+
+      &:before
+        content: ''
+        position: absolute
+        right: -50vw
+        top: 0px
+        width: 50vw
+        height: 6px
+        background: #FF297E
+        // background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='5' height='5' viewBox='0 0 5 5'><rect width='5' height='5' x='0' y='0' fill='%23FF297E' fill-rule='evenodd'/></svg>")
+
+      &:after
+        content: ''
+        position: absolute
+        left: -26px
+        bottom: -22px
+        width: 52px
+        height: 52px
+        background: url($cdnUrl + '/techby/home/circuit_light.svg')
 
   > .products-banner
     text-align: center
@@ -52,15 +117,11 @@
     &.is-light
       background: getColor('$bgColor')
 
-      > .container
-        > .image
-          background: getColor('$bgColorAlt1')
-
     > .container
       container()
 
       > .image
-        background: getColor('$bgColor')
+        background-size: 100%
         width: 100%
         height: 0
         padding-bottom: 72%
@@ -123,6 +184,10 @@
         > .container
           > .logo
             color: getColor('$primaryMainText')
+
+      > .content
+        padding: 68px 16px 300px 16px
+
 
     > .product
       &.is-light

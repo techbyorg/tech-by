@@ -8,6 +8,7 @@ import {
 
 import colors from '../../colors'
 import context from '../../context'
+import config from '../../config'
 
 if window?
   require './index.styl'
@@ -15,11 +16,13 @@ if window?
 export default $home = ->
   {lang, router} = useContext context
 
+  console.log 'home'
+
   products = [
     {
       name: 'Fundraise'
       description: lang.get 'product.fundraise.description'
-      image: ''
+      image: "#{config.CDN_URL}/techby/home/fundraise_thumbnail.png"
       url: 'https://fundraise.techby.org'
       iosAppUrl: 'TODO'
       androidAppUrl: 'TODO'
@@ -28,22 +31,25 @@ export default $home = ->
     {
       name: 'Nonprofit API'
       description: lang.get 'product.api.description'
-      image: ''
+      image: "#{config.CDN_URL}/techby/home/nonprofit_api_thumbnail.png"
       url: 'https://api.techby.org/990/v1/graphql'
       linkText: lang.get 'product.api.link'
       githubUrl: 'https://github.com/techbyorg/irs-990-api'
     }
   ]
 
-
   z '.z-home',
     z '.header',
       z '.top',
         z '.container',
-          z '.logo', 'TechBy'
+          z '.logo',
+            z '.icon'
+            'TechBy'
       z '.content',
         z '.title', lang.get 'home.title'
         z '.description', lang.get 'home.description'
+      z '.circuit-1'
+      z '.circuit-2'
     z '.products-banner',
       z '.title', lang.get 'home.productsTitle'
       z '.description', lang.get 'home.productsDescription'
