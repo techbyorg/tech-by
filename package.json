@@ -10,8 +10,10 @@
     "watch": "./bin/watch.sh"
   },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
     "clay-coffeescript-style-guide": "^1.1.0",
     "coffeelint": "^2.1.0",
+    "eslint": "^7.2.0",
     "frontend-shared-dev": "github:techbyorg/frontend-shared-dev",
     "gulp": "^4.0.2",
     "gulp-gcloud-publish": "github:aaaton/gulp-gcloud-publish"

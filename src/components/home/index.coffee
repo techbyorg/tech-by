@@ -1,6 +1,5 @@
 import {z, classKebab, useContext} from 'zorium'
 import * as _ from 'lodash-es'
-import * as Rx from 'rxjs'
 import $icon from 'frontend-shared/components/icon'
 import {
   chevronRightIconPath, githubIconPath, appleIconPath, googlePlayIconPath
@@ -15,8 +14,6 @@ if window?
 
 export default $home = ->
   {lang, router} = useContext context
-
-  console.log 'home'
 
   products = [
     {
