@@ -93,7 +93,6 @@ export default function $home () {
 
             z('.apps', [
               iosAppUrl &&
-                // router.link z 'a.app', {
                 z('a.app', {
                   href: iosAppUrl,
                   onclick: (e) => {
@@ -107,7 +106,6 @@ export default function $home () {
                   z('.text', 'App Store')
                 ]),
               androidAppUrl &&
-                // router.link z 'a.app', {
                 z('a.app', {
                   href: androidAppUrl,
                   onclick: (e) => {

@@ -6,4 +6,4 @@ import Model from './models'
 import colors from './colors'
 import config from './config'
 
-setup {$app, Lang, Model, colors, config}
+setup({ $app, Lang, Model, colors, config })
