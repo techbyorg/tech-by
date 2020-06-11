@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // TODO: This file was created by bulk-decaffeinate.
 // Sanity-check the conversion and remove this comment.
-import * as _ from 'lodash'
+import * as _ from 'lodash-es'
 import cluster from 'cluster'
 import os from 'os'
 

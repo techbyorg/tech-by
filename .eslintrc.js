@@ -8,7 +8,8 @@ module.exports = {
   ],
   globals: {
     Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly'
+    SharedArrayBuffer: 'readonly',
+    globalThis: false // means it is not writeable
   },
   parser: 'babel-eslint',
   parserOptions: {

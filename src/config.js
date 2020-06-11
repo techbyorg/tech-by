@@ -1,8 +1,8 @@
 // process.env.* is replaced at run-time with * environment variable
 // Note that simply env.* is not replaced, and thus suitible for private config
 
-import * as _ from 'lodash'
-import assertNoneMissing from 'assert-none-missing'
+import * as _ from 'lodash-es'
+import assertNoneMissing from 'assert-none-missing/index.js'
 
 let API_HOST, API_PATH, config
 

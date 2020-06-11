@@ -7,9 +7,7 @@ import $spinner from 'frontend-shared/components/spinner'
 import colors from '../../colors'
 import context from '../../context'
 
-if (typeof window !== 'undefined' && window !== null) {
-  require('./index.styl')
-}
+if (typeof window !== 'undefined') { require('./index.styl') }
 
 // generic page that gets loaded from cache for any page w/o a specific shell
 export default function $shellPage () {

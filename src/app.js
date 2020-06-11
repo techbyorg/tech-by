@@ -1,5 +1,5 @@
 import { z } from 'zorium'
-import * as _ from 'lodash'
+import * as _ from 'lodash-es'
 
 import $sharedApp from 'frontend-shared/app'
 import $privacyPage from 'frontend-shared/pages/privacy'

@@ -1,4 +1,4 @@
-import * as _ from 'lodash'
+import * as _ from 'lodash-es'
 
 const $black12 = 'rgba(0, 0, 0, 0.12)'
 const $black26 = 'rgba(0, 0, 0, 0.26)'

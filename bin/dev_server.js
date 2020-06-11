@@ -1,11 +1,7 @@
-#!/usr/bin/env node
-// TODO: This file was created by bulk-decaffeinate.
-// Sanity-check the conversion and remove this comment.
-
 import app from '../server'
 import config from '../src/config'
-let httpsServer
 
+let httpsServer
 if (config.DEV_USE_HTTPS) {
   const https = require('https')
   const fs = require('fs')
@@ -26,6 +22,8 @@ app.all('/*', function (req, res, next) {
 if (config.DEV_USE_HTTPS) {
   httpsServer.listen(config.PORT, () => console.log('Listening (https) on port %d', config.PORT))
 } else {
+  console.log('listen');
+
   app.listen(config.PORT, () => console.log({
     event: 'dev_server_start',
     message: `Listening on port ${config.PORT}`
