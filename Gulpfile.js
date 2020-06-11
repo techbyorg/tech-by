@@ -1,4 +1,4 @@
-import setup from 'frontend-shared-dev/setup_gulp'
+import setup from 'frontend-shared-dev/dist/setup_gulp'
 
 import paths from './gulp_paths'
 import Lang from './src/lang'

@@ -17,14 +17,13 @@ export default function $shellPage () {
     me: model.user.getMe()
   }))
 
-  return z('.p-shell',
+  return z('.p-shell', [
     z($appBar, {
       title: '',
       style: 'primary',
       $topLeftButton:
         z($buttonMenu, { color: colors.$header500Icon })
     }),
-    z('.spinner',
-      $spinner)
-  )
+    z('.spinner', $spinner)
+  ])
 }

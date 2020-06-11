@@ -36,5 +36,7 @@ self.onerror = function (message, file, line, column, error) {
       trace: null, // trace
       error: 'INSIDE SW ERR' + JSON.stringify(err)
     })
-  }).catch(err => typeof console !== 'undefined' && console !== null ? console.log('logs post', err) : undefined)
+  }).catch((err) =>
+    console.log('logs post', err)
+  )
 }
