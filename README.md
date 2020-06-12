@@ -32,6 +32,8 @@ More to come soonish
 
 In general don't use wildcard imports, but for lodash and RxJS do (tree shaking means it's the same as explicit imports, and naming / collisions (map, filter, etc...) of the two would be annoying)
 
+Use [] for hyperscript children, unless it's single item on same line (eg `z('.title', 'title text')`)
+
 ### Cleanup
 Occassionally run node /usr/lib/node_modules/coffee-unused/index.js --src ./src and clean up unused vars
 
