@@ -1,4 +1,7 @@
-don't include all of rxjs, lodash
+- switch ssr to pure node instead of babel. waiting on rxjs and lodash to have better esm support
+  - wait for https://www.npmjs.com/package/@esm-bundle/rxjs to support v7?
+    - or https://github.com/ReactiveX/rxjs/issues/4416
+  - lodash: https://github.com/lodash/lodash/issues/4800
 
 - separate vendor and client bundles
   - vendor bundle less likely to get updated frequently
@@ -16,7 +19,5 @@ don't include all of rxjs, lodash
 - optimize FormattedMessage. markdown parser is slow (1-5ms per message)
 
 
-- hopefully deferred resolvers will become a think in apollo-server, then we can implement instead of manually doing multiple queries (though it's less of a perf gain, more about clean code)
-
-
-preact (with compat) is 8kb (ungzipped) > dyo. not a big deal
+- hopefully deferred resolvers will become a thing in apollo-server, then we can implement instead of manually doing multiple queries (though it's less of a perf gain, more about clean code)
+  - https://github.com/apollographql/apollo-server/issues/2189

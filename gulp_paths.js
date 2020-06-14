@@ -1,4 +1,4 @@
-const path = require('path')
+import path from 'path'
 
 module.exports = {
   static: path.join(__dirname, './src/static/**/*'),

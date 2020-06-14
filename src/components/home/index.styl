@@ -97,7 +97,7 @@
         height: 52px
         background: url($cdnUrl + '/techby/home/circuit_light.svg')
 
-  > .products-banner
+  > .banner
     text-align: center
     padding: 56px 16px
 
@@ -175,6 +175,31 @@
             > .text
               font-subtitle1()
 
+  > .about-us
+    background: getColor('$bgColorAlt1')
+
+    > .grid
+      container()
+      display: grid
+      grid-template-columns: 1fr
+      grid-row-gap: 40px
+      text-align: left
+      margin-top: 60px
+
+      > .column
+        > .icon
+          display: inline-block
+
+          &.efficient
+            margin-left: -12px
+
+        > .title
+          font-h6()
+          margin-top: 20px
+
+        > .description
+          margin-top: 20px
+
   @media (min-width: $breakPointMedium)
     > .header
       > .top
@@ -218,3 +243,10 @@
 
             &:last
               margin-right: 0
+
+    > .about-us
+      > .grid
+        grid-template-columns: 1fr 1fr 1fr
+        grid-column-gap: 80px
+        margin-top: 80px
+
