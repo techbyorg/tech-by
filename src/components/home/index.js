@@ -24,7 +24,7 @@ export default function $home () {
       image: `${config.CDN_URL}/techby/home/fundraise_thumbnail.png`,
       url: 'https://fundraise.techby.org',
       iosAppUrl: 'TODO',
-      androidAppUrl: 'TODO',
+      androidAppUrl: 'https://play.google.com/store/apps/details?id=org.techby.fundraise',
       linkText: lang.get('product.fundraise.link')
     },
     {
@@ -110,11 +110,7 @@ export default function $home () {
                 ]),
               androidAppUrl &&
                 z('a.app', {
-                  href: androidAppUrl,
-                  onclick: (e) => {
-                    e.preventDefault()
-                    window.alert('Coming soon!')
-                  }
+                  href: androidAppUrl
                 }, [
                   z('.icon', [
                     z($icon,
