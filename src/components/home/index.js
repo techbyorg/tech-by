@@ -2,7 +2,8 @@ import { z, classKebab, useContext } from 'zorium'
 import * as _ from 'lodash-es'
 import $icon from 'frontend-shared/components/icon'
 import {
-  chevronRightIconPath, githubIconPath, appleIconPath, googlePlayIconPath
+  chevronRightIconPath, githubIconPath, appleIconPath, googlePlayIconPath,
+  heartIconPath
 } from 'frontend-shared/components/icon/paths'
 
 import {
@@ -50,14 +51,20 @@ export default function $home () {
       z('.content', [
         z('.title', lang.get('home.title')),
         z('.description', lang.get('home.description'))
-      ]),
-      z('.circuit-1'),
-      z('.circuit-2')
+      ])
     ]),
-    z('.banner.products', [
-      z('.title', lang.get('home.productsTitle')),
-      z('.description', lang.get('home.productsDescription'))
-    ]),
+    z('.banner.products',
+      z('.container', [
+        z('.description', [
+          lang.get('home.productsDescription'),
+          z('.icon', z($icon, {
+            icon: heartIconPath,
+            color: colors.$secondary500
+          }))
+        ]),
+        z('.title', lang.get('home.productsTitle'))
+      ])
+    ),
     _.map(products, (product, i) => {
       const {
         name, description, image, url, linkText,
@@ -65,7 +72,7 @@ export default function $home () {
       } = product
 
       return z('.product', {
-        className: classKebab({ isLight: (i % 2) })
+        className: classKebab({ isAlt: (i % 2) })
       }, [
         z('.container', [
           z('.image', {
@@ -132,50 +139,52 @@ export default function $home () {
         ])
       ])
     }),
-    z('.banner.about-us', [
-      z('.title', lang.get('home.aboutTitle')),
-      // z('.description', lang.get('home.aboutDescription')),
-      z('.grid', [
-        z('.column', [
-          z('.icon', [
-            z($icon, {
-              icon: transparentIconPath,
-              color: colors.$secondary500,
-              size: '48px'
-            })
+    z('.banner.about-us',
+      z('.container', [
+        z('.title', lang.get('home.aboutTitle')),
+        // z('.description', lang.get('home.aboutDescription')),
+        z('.grid', [
+          z('.column', [
+            z('.icon', [
+              z($icon, {
+                icon: transparentIconPath,
+                color: colors.$secondary500,
+                size: '48px'
+              })
+            ]),
+            z('.title', lang.get('home.aboutTransparentTitle')),
+            z('.description', [
+              lang.get('home.aboutTransparentDescription'),
+              ' ',
+              router.link(z('a.link', {
+                href: 'https://github.com/techbyorg'
+              }, lang.get('home.aboutTransparentGithub')))
+            ])
           ]),
-          z('.title', lang.get('home.aboutTransparentTitle')),
-          z('.description', [
-            lang.get('home.aboutTransparentDescription'),
-            ' ',
-            router.link(z('a.link', {
-              href: 'https://github.com/techbyorg'
-            }, lang.get('home.aboutTransparentGithub')))
+          z('.column', [
+            z('.icon.efficient', [
+              z($icon, {
+                icon: efficientIconPath,
+                color: colors.$secondary500,
+                size: '48px'
+              })
+            ]),
+            z('.title', lang.get('home.aboutEfficientTitle')),
+            z('.description', lang.get('home.aboutEfficientDescription'))
+          ]),
+          z('.column', [
+            z('.icon', [
+              z($icon, {
+                icon: purposeIconPath,
+                color: colors.$secondary500,
+                size: '48px'
+              })
+            ]),
+            z('.title', lang.get('home.aboutPurposeTitle')),
+            z('.description', lang.get('home.aboutPurposeDescription'))
           ])
-        ]),
-        z('.column', [
-          z('.icon.efficient', [
-            z($icon, {
-              icon: efficientIconPath,
-              color: colors.$secondary500,
-              size: '48px'
-            })
-          ]),
-          z('.title', lang.get('home.aboutEfficientTitle')),
-          z('.description', lang.get('home.aboutEfficientDescription'))
-        ]),
-        z('.column', [
-          z('.icon', [
-            z($icon, {
-              icon: purposeIconPath,
-              color: colors.$secondary500,
-              size: '48px'
-            })
-          ]),
-          z('.title', lang.get('home.aboutPurposeTitle')),
-          z('.description', lang.get('home.aboutPurposeDescription'))
         ])
       ])
-    ])
+    )
   ])
 }
