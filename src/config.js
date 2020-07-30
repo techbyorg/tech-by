@@ -28,7 +28,7 @@ if (isUrl) {
   API_PATH = ''
 }
 
-const CDN_URL = 'https://fdn.uno/d/images' // FIXME
+const CDN_URL = 'https://tdn.one/assets/images'
 
 // All keys must have values at run-time (value may be null)
 const isomorphic = {
@@ -40,10 +40,10 @@ const isomorphic = {
   EMPTY_UUID: '00000000-0000-0000-0000-000000000000',
   CDN_URL,
   // d folder has longer cache
-  SCRIPTS_CDN_URL: 'https://tdn.one/d/scripts',
-  USER_CDN_URL: 'https://fdn.uno/images', // FIXME
-  FAVICON_URL: `${CDN_URL}/techby/favicon.png?1`,
-  ICON_256_URL: `${CDN_URL}/techby/web_icon_256.png`,
+  SCRIPTS_CDN_URL: 'https://tdn.one/scripts',
+  UGC_CDN_URL: 'https://tdn.one/ugc',
+  FAVICON_URL: `${CDN_URL}/favicon.png?1`,
+  ICON_256_URL: `${CDN_URL}/web_icon_256.png`,
   IOS_APP_URL: 'FIXME', // FIXME
   GOOGLE_PLAY_APP_URL: 'FIXME', // FIXME
   GOOGLE_ANALYTICS_ID: 'UA-168233278-1',
