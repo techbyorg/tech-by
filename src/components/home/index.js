@@ -22,7 +22,7 @@ export default function $home () {
     {
       name: 'Fundraise',
       description: lang.get('product.fundraise.description'),
-      image: `${config.CDN_URL}/techby/home/fundraise_thumbnail.png`,
+      image: `${config.CDN_URL}/home/fundraise_thumbnail.png`,
       url: 'https://fundraise.techby.org',
       iosAppUrl: 'TODO',
       androidAppUrl: 'https://play.google.com/store/apps/details?id=org.techby.fundraise',
@@ -31,7 +31,7 @@ export default function $home () {
     {
       name: 'Nonprofit API',
       description: lang.get('product.api.description'),
-      image: `${config.CDN_URL}/techby/home/nonprofit_api_thumbnail.png`,
+      image: `${config.CDN_URL}/home/nonprofit_api_thumbnail.png`,
       url: 'https://api.techby.org/990/v1/graphql',
       linkText: lang.get('product.api.link'),
       githubUrl: 'https://github.com/techbyorg/irs-990-api'
